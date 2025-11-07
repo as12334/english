@@ -1,4 +1,21 @@
-﻿export const HeroSection = () => {
+﻿import type { MouseEvent } from "react";
+import { scrollToSection } from "../utils/navigation";
+
+interface HeroSectionProps {
+  onStartPractice?: () => void;
+}
+
+export const HeroSection = ({ onStartPractice }: HeroSectionProps) => {
+  const handleStart = (event: MouseEvent<HTMLButtonElement>) => {
+    event.preventDefault();
+    onStartPractice?.();
+  };
+
+  const handleOcrDemo = (event: MouseEvent<HTMLButtonElement>) => {
+    event.preventDefault();
+    scrollToSection("features");
+  };
+
   return (
     <section className="mx-auto flex max-w-5xl flex-col gap-10 px-6 pb-16 pt-12 md:flex-row md:items-center">
       <div className="flex-1 space-y-6">
@@ -7,11 +24,17 @@
           WordSpark：简洁大方的英语单词拼写游戏
         </h1>
         <p className="max-w-xl text-base text-slate-600">
-          在碎片时间挑战教材词库、每日主题与趣味闯关。支持拍照识别、错词复盘与排行榜，让背单词更有参与感。
+          碎片时间里挑战教材词库、每日主题与趣味闯关。支持拍照识别、错题复盘与排行榜，让背单词更有参与感。
         </p>
         <div className="flex flex-wrap gap-3">
-          <button className="button-primary">开始练习</button>
-          <button className="rounded-full border border-slate-300 px-5 py-2 text-sm font-medium text-slate-700 transition hover:border-slate-400 hover:text-slate-900">
+          <button className="button-primary" onClick={handleStart} type="button">
+            开始练习
+          </button>
+          <button
+            className="rounded-full border border-slate-300 px-5 py-2 text-sm font-medium text-slate-700 transition hover:border-slate-400 hover:text-slate-900"
+            onClick={handleOcrDemo}
+            type="button"
+          >
             体验拍照识别
           </button>
         </div>
@@ -26,7 +49,7 @@
             <p className="text-sm text-slate-600">n. 地震；地表的剧烈震动</p>
             <div className="flex items-center gap-2 text-xs text-slate-500">
               <span>剩余 58 分钟</span>
-              <span>?</span>
+              <span>•</span>
               <span>连胜 +2</span>
             </div>
           </div>
@@ -34,11 +57,10 @@
         <article className="card">
           <p className="text-sm font-medium text-slate-700">OCR 快速录词</p>
           <p className="mt-1 text-sm text-slate-500">
-            拍下教材或练习册，一键生成练习列表；可手动校对、识别历史随时查看。
+            拍下教材或练习册，一键生成练习列表；可手动校对，识别历史随时查看。
           </p>
         </article>
       </div>
     </section>
   );
 };
-

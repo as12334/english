@@ -9,7 +9,7 @@
   },
   {
     title: "H5 多端体验",
-    description: "统一的轻量界面，手机、平板、电脑都拥有顺滑的触控/键盘操作。"
+    description: "统一的轻量界面，手机、平板、电脑都拥有顺滑触控与键盘操作。"
   }
 ];
 
@@ -20,7 +20,7 @@ export const FeatureHighlights = () => {
         <header>
           <h2 className="text-2xl font-semibold text-slate-900">把学习流程做得更轻盈</h2>
           <p className="mt-2 max-w-2xl text-sm text-slate-600">
-            WordSpark 专注于“简洁大方 + 高频使用”的体验，核心场景覆盖拍照录词、教材自学与快捷练习。
+            WordSpark 专注“简洁大方 + 高频使用”，核心场景覆盖拍照录词、教材自学与快捷练习。
           </p>
         </header>
         <div className="grid gap-4 md:grid-cols-3">

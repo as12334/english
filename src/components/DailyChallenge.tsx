@@ -11,7 +11,7 @@ export const DailyChallenge = () => {
         <div className="space-y-6">
           <h2 className="text-2xl font-semibold text-slate-900">每日挑战 & 智能录词</h2>
           <p className="text-sm text-slate-600">
-            每天中午准时更新词单，结合 OCR 拍照录词与错题复盘，帮助你在碎片时间保持节奏。识别失败自动触发人工校对提示，所有图片即时删除，保障隐私安全。
+            每天中午准时更新词单，结合 OCR 拍照录词和错题复盘，帮助你在碎片时间保持节奏。识别失败会提示人工校对，所有图片即时删除，保障隐私安全。
           </p>
           <ul className="grid gap-3 text-sm text-slate-700" role="list">
             <li className="flex items-start gap-2">
@@ -24,13 +24,13 @@ export const DailyChallenge = () => {
               <span className="mt-1 inline-flex h-5 w-5 items-center justify-center rounded-full bg-indigo-200 text-[10px] font-semibold text-indigo-700">
                 2
               </span>
-              如果手头有纸质资料，拍照后即时识别为练习列表，可手动修订。
+              拍摄纸质资料或上传图片，自动识别生成练习列表，可手动修订。
             </li>
             <li className="flex items-start gap-2">
               <span className="mt-1 inline-flex h-5 w-5 items-center justify-center rounded-full bg-emerald-200 text-[10px] font-semibold text-emerald-700">
                 3
               </span>
-              进入拼写关卡，享受倒计时、提示、连击加分与语音发音辅助。
+              进入拼写关卡，配合倒计时、提示、连击加分与语音发音辅助完成练习。
             </li>
           </ul>
         </div>
@@ -52,4 +52,3 @@ export const DailyChallenge = () => {
     </section>
   );
 };
-

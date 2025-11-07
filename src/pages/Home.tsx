@@ -2,15 +2,26 @@
 import { FeatureHighlights } from "../components/FeatureHighlights";
 import { HeroSection } from "../components/HeroSection";
 import { ModeCards } from "../components/ModeCards";
+import { PracticePanel } from "../components/PracticePanel";
 
-export const HomePage = () => {
+interface HomePageProps {
+  practiceActive: boolean;
+  onStartPractice: () => void;
+  onClosePractice: () => void;
+}
+
+export const HomePage = ({
+  practiceActive,
+  onStartPractice,
+  onClosePractice
+}: HomePageProps) => {
   return (
     <main>
-      <HeroSection />
+      <HeroSection onStartPractice={onStartPractice} />
+      <PracticePanel active={practiceActive} onClose={onClosePractice} />
       <ModeCards />
       <FeatureHighlights />
       <DailyChallenge />
     </main>
   );
 };
-

@@ -1,17 +1,17 @@
 ﻿const modes = [
   {
     title: "教材闯关",
-    description: "根据年级和单元逐个挑战教材词汇，自动记录掌握度。",
-    callout: "适配小学到高中主流教材"
+    description: "按照年级和单元逐个挑战教材词汇，自动记录掌握度。",
+    callout: "覆盖小学到高中主流教材"
   },
   {
     title: "每日挑战",
-    description: "精选主题词单配合例句和语境，限时连击更刺激。",
+    description: "精选主题词单配合例句与语境，限时连击更刺激。",
     callout: "每天刷新 10 道新题"
   },
   {
     title: "自由练习",
-    description: "自定义词单、难度与提示方式，适合碎片时间。",
+    description: "自定义词单、难度与提示方式，随时随地开一局。",
     callout: "支持 OCR / 语音录入"
   }
 ];
@@ -23,7 +23,7 @@ export const ModeCards = () => {
         <div>
           <h2 className="text-2xl font-semibold text-slate-900">丰富但简洁的学习模式</h2>
           <p className="mt-2 max-w-2xl text-sm text-slate-600">
-            三大模式覆盖教材、挑战和自由练习，统一的简洁界面让不同年级、不同场景都能快速上手。
+            三大模式覆盖教材、挑战与自由练习，统一的简洁界面可适配不同年级与场景。
           </p>
         </div>
         <div className="grid gap-4 md:grid-cols-3">
@@ -41,4 +41,3 @@ export const ModeCards = () => {
     </section>
   );
 };
-

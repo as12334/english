@@ -1,4 +1,15 @@
-﻿export const HeaderBar = () => {
+﻿import type { MouseEvent } from "react";
+
+interface HeaderBarProps {
+  onStartPractice?: () => void;
+}
+
+export const HeaderBar = ({ onStartPractice }: HeaderBarProps) => {
+  const handleStart = (event: MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+    onStartPractice?.();
+  };
+
   return (
     <header className="mx-auto flex max-w-5xl items-center justify-between px-6 py-6">
       <div className="flex items-center gap-2 text-lg font-semibold text-slate-800">
@@ -18,8 +29,9 @@
           功能亮点
         </a>
       </nav>
-      <button className="button-primary">立即开始</button>
+      <a className="button-primary inline-flex items-center justify-center" href="#challenge" onClick={handleStart}>
+        立即开始
+      </a>
     </header>
   );
 };
-
