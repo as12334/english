@@ -1,4 +1,8 @@
-﻿import type { PagesFunction } from "@cloudflare/workers-types";
+﻿/// <reference types="@cloudflare/workers-types" />
+import type {
+  DurableObjectNamespace,
+  PagesFunction
+} from "@cloudflare/workers-types";
 
 export interface Env {
   LEADERBOARD: DurableObjectNamespace;
@@ -18,4 +22,3 @@ export const onRequest: PagesFunction<Env> = async (context) => {
     status: response.status
   });
 };
-

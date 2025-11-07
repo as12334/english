@@ -1,4 +1,5 @@
-﻿import type { PagesFunction } from "@cloudflare/workers-types";
+﻿/// <reference types="@cloudflare/workers-types" />
+import type { KVNamespace, PagesFunction } from "@cloudflare/workers-types";
 
 export interface Env {
   WORD_BANK: KVNamespace;
@@ -40,4 +41,3 @@ export const onRequest: PagesFunction<Env> = async (context) => {
     headers: { "Content-Type": "application/json" }
   });
 };
-

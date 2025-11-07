@@ -1,4 +1,6 @@
-﻿export class LeaderboardObject {
+﻿/// <reference types="@cloudflare/workers-types" />
+
+export class LeaderboardObject {
   async fetch(request: Request): Promise<Response> {
     const url = new URL(request.url);
     if (url.pathname.endsWith("/health")) {
@@ -23,4 +25,3 @@
     });
   }
 }
-
