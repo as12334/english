@@ -6,25 +6,6 @@ pages_build_output_dir = "dist"
 [vars]
 APP_ENV = "development"
 
-[[kv_namespaces]]
-binding = "WORD_BANK"
-id = ""
-preview_id = ""
-
-[[durable_objects.bindings]]
-name = "LEADERBOARD"
-class_name = "LeaderboardObject"
-
-[[r2_buckets]]
-binding = "WORD_ASSETS"
-bucket_name = ""
-
-[build]
-command = "npm run build"
-
-[[d1_databases]]
-binding = "WORDS_DB"
-database_name = ""
-id = ""
 
 
+# Durable Objects + build steps will be reintroduced once production bindings exist.
