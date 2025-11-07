@@ -1,0 +1,11 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-label="WordSpark icon">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="1" y2="0">
+      <stop offset="0" stop-color="#F59E0B" />
+      <stop offset="1" stop-color="#6366F1" />
+    </linearGradient>
+  </defs>
+  <rect width="48" height="48" rx="12" fill="url(#g)" />
+  <path d="M14 15h6l4 18 4-18h6" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+</svg>
+
