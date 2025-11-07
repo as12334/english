@@ -27,3 +27,7 @@ Thumbs.db
 # Tooling caches
 .cache/
 tmp/
+functions/.tsbuild/
+.tsbuild/
+*.tsbuildinfo
+functions/.tsbuild/
